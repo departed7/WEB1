@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер событий</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Мои события</h1>
+            <!--добавление события -->
+            <button id="addEventBtn" class="btn" onclick="goToAddEvent()">Добавить событие</button>
+        </header>
+        <div class="controls">
+            <div class="filter-control">
+                <label for="categoryFilter">Фильтр по категории:</label>
+                <select id="categoryFilter">
+                    <option value="all">Все категории</option>
+                    <option value="personal">Личные</option>
+                    <option value="work">Рабочие</option>
+                    <option value="social">Общественные</option>
+                </select>
+            </div>
+            <div class="sort-control">
+                <label for="dateSort">Сортировка по дате:</label>
+                <select id="dateSort">
+                    <option value="asc">Сначала ближайшие</option>
+                    <option value="desc">Сначала дальние</option>
+                </select>
+            </div>
+        </div>
+        <div id="eventsContainer" class="events-container"></div>
+    </div>
+    <script src="/JS/script.js"></script>
+</body>
+</html>
